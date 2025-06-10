@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography With Reb</title>
+  <link href="https://fonts.gstatic.com/s/greatvibes/v20/RWmMoKWR9v4ksMfaWd_JN9XFiaQoDmlr.woff2" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:cursive;
+      color: #3b2f2f;
+      background-color: #f8f5f1;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10% 20px;
+      background: url('nav-background.jpg') center/cover no-repeat;
+      background-size: cover;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .logo-center img {
+      height: 200px;
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 30px;
+      
+
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-family:cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  font-size: 1.5rem;
+      transition: color 0.3s;
+      
+    }
+
+    nav a:hover {
+      color: #ffd6d6;
+    }
+
+    .hero {
+      background: url('hero-image.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 120px 20px;
+      color: #fff;
+      background-blend-mode: multiply;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    .about, .contact, .enquires {
+      background-color: #fff;
+    }
+
+    .portfolio .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 30px;
+      object-fit: cover;
+    }
+
+
+    form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f9f6f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Playfair Display', serif;
+}
+
+form button {
+  background-color: #6e5e5e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #6e5e5e;
+}
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #f0ece6;
+      color: #6e5e5e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#enquires">Enquires</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="logo-center">
+        <img src="/Users/rebbecca/Library/CloudStorage/Dropbox-SteveCharlesElec (22-05-2025 11:47)/Rebbecca Charles/Mac (2)/Downloads/IMG_8915.PNG" alt="Photography With Reb Logo" />
+    </h1>
+    <p>Capturing timeless elegance through the lens</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2><b><u>About Reb</u></b></h2>
+    <p>Photography With Reb offers refined, natural-light photography services with a focus on storytelling, elegance, and emotional authenticity. Led by photographer Reb, the studio specialises in weddings, portraits, lifestyle imagery, and brand content. Each session is approached with a fine-art sensibility, ensuring that every frame tells a meaningful story with grace and artistry. Ideal for clients seeking timeless visuals that blend softness, depth, and genuine emotion.</p>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2><u>Portfolio</u></h2>
+    <div class="gallery">
+      <img src="/Users/rebbecca/Library/CloudStorage/Dropbox-SteveCharlesElec (22-05-2025 11:47)/Rebbecca Charles/Mac (2)/Downloads/c5b88498-e8ef-45bd-b082-453a25594e8c.jpg" alt="Wedding shot" width="auto" height="300px" />
+      <img src="/Users/rebbecca/Library/CloudStorage/Dropbox-SteveCharlesElec (22-05-2025 11:47)/Rebbecca Charles/Mac (2)/Downloads/IMG_8826.jpeg" alt="Portrait session" width="auto" height="300px"/>
+      <img src="/Users/rebbecca/Library/CloudStorage/Dropbox-SteveCharlesElec (22-05-2025 11:47)/Rebbecca Charles/Mac (2)/Downloads/IMG_5310.jpeg" alt="Lifestyle photo" width="auto" height="300px"/>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2><u>Contact</u></h2>
+    <p>Email: <a href="mailto:photographywithreb@gmail.com"><img src="/Users/rebbecca/Library/CloudStorage/Dropbox-SteveCharlesElec/Rebbecca Charles/Mac (2)/Documents/download.png" alt="Email" height="30px"></a></p>
+    <p>Instagram: <a href="https://www.instagram.com/photography_with_reb/" target="_blank"><img src="/Users/rebbecca/Library/CloudStorage/Dropbox-SteveCharlesElec/Rebbecca Charles/Mac (2)/Documents/Instagram.png" alt="Instagram" height="30px"></a></p>
+  </section>
+
+<section id="enquires" class="enquires">
+<h2><u>Enquires</u></h2>
+ <form 
+  action="https://formspree.io/f/mgvyaylo"
+  method="POST"
+>
+<form action="mailto:photographywithreb@gmail.com" method="POST" enctype="text/plain" style="margin-top: 30px;">
+  <label for="name">Name:</label><br />
+  <input type="text" id="name" name="name" required /><br /><br />
+
+  <label for="email">Email:</label><br />
+  <input type="email" id="email" name="email" required /><br /><br />
+
+  <label for="location">Location:</label><br />
+  <input type="text" id="location" name="location" required /><br /><br />
+
+  <label for="date">Date of Event:</label><br />
+  <input type="date" id="date" name="date" required /><br /><br />
+
+  <label for="message">Message:</label><br />
+  <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+  <button type="submit">Send 💌 </button>
+ <input type="hidden" name="_next" value="https://photographywithreb.com/thank-you.html"/>
+</form>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Photography With Reb. All rights reserved.</p>
+  </footer>
+</body>
+</html>
