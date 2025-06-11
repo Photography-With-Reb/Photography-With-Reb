@@ -1,11 +1,13 @@
-            - name: Deploy markdown.html
-  # You may pin to the exact commit or the version.
-  # uses: PJ-568/MARKDOWN.HTML@5bb8114e696fba6e2138a1612691cfffc955e8e2
-  uses: PJ-568/MARKDOWN.HTML@v1.10.1
-  with:Photography-With-Reb-orchestration.yaml
-    # Directory to deploy the minimized HTML file
-    target-dir: # optional, default is .
-    # Name of the minimized HTML file
-    file-name: # optional, default is index.html
+apiVersion: v1
+kind: Service
+metadata:
+  name: photography-with-reb
+spec:
+  selector:
+    app: reb-portfolio
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
           
           
