@@ -19,5 +19,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/   # Change if your files are in another folder
+          local-dir: ./docs/   # Change if your files are in another folder
           server-dir: /htdocs/  # Use the correct directory for your IONOS hosting
