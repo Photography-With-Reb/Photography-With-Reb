@@ -1,34 +1,23 @@
-name: Deploy Photography With Reb to IONOS
+name: Deploy Static Site to IONOS via FTP
 
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main  # Change if your default branch is different
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: 📥 Checkout Code
         uses: actions/checkout@v3
 
-      - name: 🧱 Set Up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18  # or the version your project uses
-
-      - name: 📦 Install Dependencies
-        run: npm install
-
-      - name: 🏗️ Build the Project
-        run: npm run build
-
-      - name: 🚀 Deploy to IONOS via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+      - name: 🚀 FTP Deploy to IONOS
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./doc  # Replace with your actual build output folder if different
-          server-dir: /      # Change to subdirectory if needed (e.g. /htdocs/)
+          local-dir: ./public  # Or ./ if files are in root
+          server-dir: /htdocs/  # Change based on your IONOS setup
