@@ -3,7 +3,7 @@ name: Deploy Static Site to IONOS via FTP
 on:
   push:
     branches:
-      - main  # Change if your default branch is different
+      - main  # change this if your default branch is different
 
 jobs:
   deploy:
@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 🚀 FTP Deploy to IONOS
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: samkirkland/ftp-deploy-action@4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public  # Or ./ if files are in root
-          server-dir: /htdocs/  # Change based on your IONOS setup
+          local-dir: ./public  # or ./ if your HTML/CSS are in root
+          server-dir: /htdocs/  # adjust based on your IONOS file path
