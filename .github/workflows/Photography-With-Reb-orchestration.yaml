@@ -21,5 +21,7 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           port: 22
           source: ./docs/
-              
-          target: /logs/ # change to your correct IONOS remote directory
+          target: ./logs/ 
+          overwrite: true
+          strip_components: 1
+          debug: true
