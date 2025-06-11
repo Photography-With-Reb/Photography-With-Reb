@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           port: 22
-          source: /         # or ./public if that’s your folder
-          target: /htdocs/   # change to your correct IONOS remote directory
+          source: ./docs/         # or ./public if that’s your folder
+          target: /logs/  # change to your correct IONOS remote directory
