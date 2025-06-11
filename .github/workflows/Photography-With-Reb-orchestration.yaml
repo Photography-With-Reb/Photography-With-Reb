@@ -22,4 +22,4 @@ jobs:
           port: 22
           source: ./Photography With Reb.html/
               
-          target: // # change to your correct IONOS remote directory
+          target: /logs/ # change to your correct IONOS remote directory
