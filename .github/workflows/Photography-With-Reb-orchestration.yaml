@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           port: 22
           source: ./docs/
-          target: ./logs/ 
+          target: /htdocs/ 
           overwrite: true
           strip_components: 1
           debug: true
