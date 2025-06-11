@@ -1,9 +1,9 @@
-name: Deploy Static Site to IONOS via FTP
+name: Deploy Static Site to IONOS via SFTP
 
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main  # Change this to your actual default branch if different
 
 jobs:
   deploy:
@@ -13,11 +13,12 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v3
 
-      - name: 🚀 FTP Deploy to IONOS
-        uses: samkirkland/ftp-deploy-action@v4.3.0
+      - name: 🚀 Upload via SFTP to IONOS
+        uses: appleboy/scp-action@v0.1.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./docs/   # Change if your files are in another folder
-          server-dir: /htdocs/  # Use the correct directory for your IONOS hosting
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          port: 22
+          source: ./docs/         # or ./public if that’s your folder
+          target: /htdocs/   # change to your correct IONOS remote directory
