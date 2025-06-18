@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: ./Photography With Reb.html
+  DEPLOYMENT_FOLDER: ./
 
 jobs:
 # Please do not rename this job
@@ -27,24 +27,13 @@ jobs:
         with:
           submodules: 'recursive'
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: HTML
-
-      - name: Build Node assets
-        env:
-          CI: true
-          SITE_URL: ${{ inputs.site-url }}
-        run: npm run build
-
 # Please do not touch the following action
       - name: Store deployment content
         uses: ionos-deploy-now/artifact-action@v1
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: af136aaf-2999-40d2-b252-24943ddc416a
+          project-id: 940ba7b3-951d-4c6f-9f6c-ebadf5814b83
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
